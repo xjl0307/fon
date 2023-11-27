@@ -99,7 +99,26 @@ CCTV16,https://live.goodiptv.club/api/bestv.php?id=cctv16hd8m/8000000
 CCTV16,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226921/index.m3u8?
 CCTV17,http://hms224nc1972679578.live.aikan.miguvideo.com/wh7f454c46tw1594433061_461954091/migu/kailu/20200324/cctv17hd/57/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=112.45.97.120&timestamp=20230208133753&ContentId=265667526&timezone=UTC&mtv_session=2ab00b83c917e8ba1b1bb082711b8b77&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=4c04c5308e4761e3cc4b36134b05b864
 
-
+央卫IPV6,#genre#
+CCTV-1 综合, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001022/index.m3u8
+CCTV-2 财经, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001220/index.m3u8
+CCTV-3 综艺, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001186/index.m3u8
+CCTV-4 中文国际, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001221/index.m3u8
+CCTV-5 体育, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001187/index.m3u8
+CCTV-5+ 体育赛事, http://[2409:8087:7000:20:1000::22]:6060/yinhe/2/ch00000090990000001334/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
+CCTV-6 电影, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001188/index.m3u8
+CCTV-7 国防军事, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001236/index.m3u8
+CCTV-8 电视剧, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001189/index.m3u8
+CCTV-9 纪录, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001237/index.m3u8
+CCTV-10 科教, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001238/index.m3u8
+CCTV-11 戏曲, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001309/index.m3u8
+CCTV-12 社会与法, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001239/index.m3u8
+CCTV-13 新闻, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001328/index.m3u8
+CCTV-14 少儿, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001240/index.m3u8
+CCTV-15 音乐, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001338/index.m3u8
+CCTV-16 奥林匹克, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001258/index.m3u8
+CCTV-17 农业农村, http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001241/index.m3u8
+CCTV-8K 超高清, http://[2409:8087:2001:20:2800:0:df6e:eb02]:80/wh7f454c46tw2749731958_105918260/ott.mobaibox.com/PLTV/3/224/3221228165/index.m3u8?icpid=3&RTS=1681529690&from=40&popid=40&hms_devid=2039&prioritypopid=40&vqe=3
 
 地方,#genre#
 浙江卫视,http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
