@@ -134,6 +134,7 @@ CCTV-8K 超高清, http://[2409:8087:2001:20:2800:0:df6e:eb02]:80/wh7f454c46tw27
 江西卫视,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001034/index.m3u8
 河北卫视,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001229/index.m3u8
 河南卫视,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001222/index.m3u8
+河南卫视,http://[2409:8087:2001:20:2800:0:df6e:eb17]/ott.mobaibox.com/PLTV/3/224/3221228221/index.m3u8
 浙江卫视,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001023/index.m3u8
 海南卫视,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001183/index.m3u8
 深圳卫视,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001030/index.m3u8
@@ -181,6 +182,8 @@ CCTV-8K 超高清, http://[2409:8087:2001:20:2800:0:df6e:eb02]:80/wh7f454c46tw27
 湖南卫视,https://live.goodiptv.club/api/cqyx.php?id=hunanHD
 广东卫视,https://live.goodiptv.club/api/cqyx.php?id=guangdongHD
 河南卫视,https://live.goodiptv.club/api/cqyx.php?id=henanHD
+河南卫视,http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226344/index.m3u8
+河南卫视,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226480/index.m3u8
 山西卫视,https://live.goodiptv.club/api/cqyx.php?id=shanxiSD
 兵团卫视,https://live.goodiptv.club/api/cqyx.php?id=bingtuanSD
 宁夏卫视,https://live.goodiptv.club/api/cqyx.php?id=ningxia
