@@ -41,7 +41,7 @@ proxies:
 #==============================（vless-ws-tls节点）
 - name: vless-ws-tls节点1                           #可自定义名称
   type: vless
-  server: ip1.fonces.eu.org                          #解析的域名或者优选域名IP
+  server: 172.67.55.152                          #解析的域名或者优选域名IP
   port: 2083                                      #自定义的端口
   uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
   udp: true
@@ -52,10 +52,10 @@ proxies:
     path: "/?ed=2048"                              #" "内自定义的path路径
     headers:
       Host: vn.fonces.eu.org                       #host域名，与上面的servername一致
-
+#==============================（vless-ws-tls节点）
 - name: vless-ws-tls节点2                          #可自定义名称
   type: vless
-  server: ip2.fonces.eu.org                          #解析的域名或者优选域名IP
+  server: 162.159.134.16                          #解析的域名或者优选域名IP
   port: 2083                                      #自定义的端口
   uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
   udp: true
@@ -66,10 +66,10 @@ proxies:
     path: "/?ed=2048"                              #" "内自定义的path路径
     headers:
       Host: vn.fonces.eu.org                       #host域名，与上面的servername一致
-
+#==============================（vless-ws-tls节点）
 - name: vless-ws-tls节点3                           #可自定义名称
   type: vless
-  server: ip3.fonces.eu.org                          #解析的域名或者优选域名IP
+  server: 190.93.246.100                          #解析的域名或者优选域名IP
   port: 2083                                      #自定义的端口
   uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
   udp: true
@@ -80,10 +80,10 @@ proxies:
     path: "/?ed=2048"                              #" "内自定义的path路径
     headers:
       Host: vn.fonces.eu.org                       #host域名，与上面的servername一致
-
+#==============================（vless-ws-tls节点）
 - name: vless-ws-tls节点4                           #可自定义名称
   type: vless
-  server: ip4.fonces.eu.org                          #解析的域名或者优选域名IP
+  server: 172.64.140.149                          #解析的域名或者优选域名IP
   port: 2083                                      #自定义的端口
   uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
   udp: true
