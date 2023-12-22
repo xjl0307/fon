@@ -1,0 +1,156 @@
+#甬哥Github项目  ：github.com/yonggekkk
+#甬哥Blogger博客 ：ygkkk.blogspot.com
+#甬哥YouTube频道 ：www.youtube.com/@ygkkk
+#====Clash-meta精简配置文件模版：更新至15个主流节点（V23.11.12）=====
+#====参考自clash-meta官方文档：wiki.metacubex.one=====
+
+#（一区）=============================（clash配置）
+#dns可自行修改
+port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  listen: :53
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver: 
+    - 223.5.5.5
+    - 8.8.8.8
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+
+#（二区）==============================（代理协议）
+#当前12个协议节点配置模版，按需求修改，如某协议节点不用，则无需删除，确保三区代理分流中没有该name节点名称即可
+proxies:
+
+#==============================（vless-ws-tls节点）
+- name: vless-ws-tls节点1                           #可自定义名称
+  type: vless
+  server: ip1.fonces.eu.org                          #解析的域名或者优选域名IP
+  port: 2083                                      #自定义的端口
+  uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
+  udp: true
+  tls: true
+  network: ws
+  servername: vn.fonces.eu.org                     #sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              #" "内自定义的path路径
+    headers:
+      Host: vn.fonces.eu.org                       #host域名，与上面的servername一致
+
+- name: vless-ws-tls节点2                          #可自定义名称
+  type: vless
+  server: ip2.fonces.eu.org                          #解析的域名或者优选域名IP
+  port: 2083                                      #自定义的端口
+  uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
+  udp: true
+  tls: true
+  network: ws
+  servername: vn.fonces.eu.org                     #sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              #" "内自定义的path路径
+    headers:
+      Host: vn.fonces.eu.org                       #host域名，与上面的servername一致
+
+- name: vless-ws-tls节点3                           #可自定义名称
+  type: vless
+  server: ip3.fonces.eu.org                          #解析的域名或者优选域名IP
+  port: 2083                                      #自定义的端口
+  uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
+  udp: true
+  tls: true
+  network: ws
+  servername: vn.fonces.eu.org                     #sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              #" "内自定义的path路径
+    headers:
+      Host: vn.fonces.eu.org                       #host域名，与上面的servername一致
+
+- name: vless-ws-tls节点4                           #可自定义名称
+  type: vless
+  server: ip4.fonces.eu.org                          #解析的域名或者优选域名IP
+  port: 2083                                      #自定义的端口
+  uuid: ce093909-1e16-4244-80ba-7e3b1f5abdd1       #自定义的uuid
+  udp: true
+  tls: true
+  network: ws
+  servername: vn.fonces.eu.org                     #sni域名，与下面的host一致
+  ws-opts:
+    path: "/?ed=2048"                              #" "内自定义的path路径
+    headers:
+      Host: vn.fonces.eu.org                       #host域名，与上面的servername一致
+
+
+#==============================（warp-wireguard节点）  
+- name: warp-wireguard节点                                   #可自定义名称
+  type: wireguard         
+  server: 162.159.192.212                                     #可自定义优选对端IP，与下面port的端口相对应
+  port: 955                                                 #可自定义优选对端IP，与上面server的IP相对应
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8288:c916:176b:9856:997              #与private-key相对应，如删除本行，表示仅IPV4
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: 8JzsUebRNEBgqX84blHX6K94UJUNm4BHOq8sc5OWfmw=  #获取private-key，私key
+  udp: true
+
+
+
+#（三区）==============================（代理分流）
+#分流组可自行创建添加，proxies参数下的name节点名称，按需求自行增减，确保出现的name节点名称在二区代理协议中可查找
+proxy-groups:
+- name: 负载均衡
+  type: load-balance
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  strategy: round-robin
+  proxies:                                     
+    - vless-ws-tls节点1             #自定义添加协议的name字段
+    - vless-ws-tls节点2
+    - vless-ws-tls节点3
+    - vless-ws-tls节点4
+
+
+- name: 自动选择
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+    - vless-ws-tls节点1                            #自定义添加协议的name字段
+    - vless-ws-tls节点2
+    - vless-ws-tls节点3
+    - vless-ws-tls节点4
+    
+- name: 🌍选择代理节点
+  type: select
+  proxies:
+    - 负载均衡                                            #自定义添加协议的name字段
+    - 自动选择
+    - DIRECT
+    - vless-ws-tls节点1                            #自定义添加协议的name字段
+    - vless-ws-tls节点2
+    - vless-ws-tls节点3
+    - vless-ws-tls节点4
+    
+
+
+#（四区）==============================（代理规则）
+#代理规则可自行添加 
+rules:
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🌍选择代理节点
